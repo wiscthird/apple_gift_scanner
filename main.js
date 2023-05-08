@@ -15,7 +15,7 @@ $("#my_start").click(()=>{
 			target: document.getElementById("my_quagga")
 		},
 		decoder: {
-			readers: ["ean_reader"]
+			readers: ["code_128_reader"]
 		}
 	}, err=>{
 		if(err){
@@ -40,7 +40,7 @@ $("#my_start").click(()=>{
 	Quagga.onDetected(result=>{
 		console.log(result.codeResult.code);
 		$("#my_result").text(result.codeResult.code);
-		$("#my_barcode div").barcode(result.codeResult.code, "code_128_reader");
+//		$("#my_barcode div").barcode(result.codeResult.code, "code_128_reader");
 	});
 });
 
