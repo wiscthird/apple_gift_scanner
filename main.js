@@ -40,7 +40,7 @@ $("#my_start").click(()=>{
 	Quagga.onDetected(result=>{
 		console.log(result.codeResult.code);
 		$("#my_result").text(result.codeResult.code);
-		$("#my_barcode div").barcode(result.codeResult.code, "ean13");
+		$("#my_barcode div").barcode(result.codeResult.code, "code_128_reader");
 	});
 });
 
